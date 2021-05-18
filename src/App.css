@@ -2,37 +2,121 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f7fbff;
+  height: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 35px;
+  /* justify-content: center; */
+  gap: 105px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list .card-wrapper{
+  width: 270px;
+  height: 200px;
+  /* margin-right: 100px; */
+  gap: 25px;
+  text-align: left;
+  border: 1px solid #fbfbfb;
+  /* padding: 15px 20px; */
+  box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%);
+  position: relative;
+}
+
+.card-wrapper .border-line{
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+		90deg,
+		rgba(255,118,20,1),
+		rgba(255,84,17,1)
+  )
+}
+
+.card-wrapper .footer-link i:before{
+  color: #ff5411;
+}
+
+.footer-link{
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+
+
+.card-wrapper:nth-child(5n + 1) .border-line {
+	background: linear-gradient(
+		90deg,
+		rgba(93,12,255,1),
+		rgba(155,0,250,1) 
+);
+
+
+}
+
+.card-wrapper:nth-child(5n + 1) .footer-link i:before{
+  color:rgb(93,12,255);
+}
+
+.card-wrapper:nth-child(5n + 1) h5{
+	color:#cab0ff;
+}
+
+.card-wrapper:nth-child(5n + 2) .border-line{
+	background: linear-gradient(
+		90deg,
+		rgba(255,12,241,1),
+		rgba(250,0,135,1)
+)
+}
+
+.card-wrapper:nth-child(5n + 2) .footer-link i:before{
+  color:rgb(255,12,241);
+}
+
+.card-wrapper:nth-child(5n + 2) h5{
+	color:#ffddef;
+}
+
+.card-wrapper:nth-child(5n + 3) .border-line{
+	background: linear-gradient(
+		90deg,
+		rgba(20,159,255,1),
+		rgba(17,122,255,1)
+)
+}
+
+.card-wrapper:nth-child(5n + 3) .footer-link i:before{
+  color:rgb(20,159,255);
+}
+
+
+.card-wrapper:nth-child(5n + 3) h5{
+	color:#c0dbff;
+}
+
+
+.card-wrapper:nth-child(5n + 4) .border-line{
+	background: linear-gradient(
+    90deg,
+    rgb(110, 255 ,20),
+    rgb(17, 255 ,103)
+    )
+}
+
+.card-wrapper:nth-child(5n + 4) .footer-link i:before{
+  color:rgb(110,255, 20);
+}
+
+.card-wrapper:nth-child(5n + 4) h5{
+	color:#beffd6;
 }
